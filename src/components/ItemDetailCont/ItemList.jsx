@@ -24,7 +24,7 @@ const ItemList = ({ prod }) => {
                 <Card.Text>
                 {prod.gender}
                 </Card.Text>
-                <Button variant="primary">Comprar</Button>
+                <Button onClick={()=>redirectItemDetail(prod.id)}  variant="primary">Comprar</Button>
             </Card.Body>
         </Card>
     );

@@ -22,7 +22,7 @@ function ColorSchemesExample() {
 
             
           </Nav>
-          <CardWidget className="justify-content-end"/>
+          <Link to="/cart"> <CardWidget /></Link>
         </Container>
       </Navbar>
     </>

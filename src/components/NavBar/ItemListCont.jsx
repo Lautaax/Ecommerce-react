@@ -1,8 +1,8 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import { allProducts, productsByCategory } from '../../services/mockService';
 import ItemList from "../ItemDetailCont/ItemList";
 import { useParams } from 'react-router-dom';
+import { allProducts,productsByCategory } from '../../services/firebase';
 
 
 
@@ -11,7 +11,6 @@ const ItemListCont = () => {
   const [products, setProducts] = useState([])
   const [category, setCategory] = useState([])
   const { categoryId } = useParams();
-console.log (categoryId)
 
   useEffect(() => {
     allProducts().then(res => setProducts(res))
