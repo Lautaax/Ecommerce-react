@@ -21,8 +21,11 @@ const ItemList = ({ prod }) => {
             <Card.Img variant="top" src={prod.image} onClick={()=>redirectItemDetail(prod.id)} />
             <Card.Body  >
                 <Card.Title  >{prod.first_name}</Card.Title>
-                <Card.Text>
+                <Card.Text>Genero:
                 {prod.gender}
+                </Card.Text>
+                <Card.Text>Precio: 
+                {prod.precio}
                 </Card.Text>
                 <Button onClick={()=>redirectItemDetail(prod.id)}  variant="primary">Comprar</Button>
             </Card.Body>
