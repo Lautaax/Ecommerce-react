@@ -1,18 +1,26 @@
 import { useState } from "react"
 import { useContext } from "react"
 import GlobalContext from "../../context/GlobalContext"
-
+import swal from 'sweetalert'
 
 const ItemCount = ({ stock, show, setShow, products }) => {
 
     const [counter, setcounter] = useState(1)
-    const { countCart, setcountCart, setCarrito,carrito } = useContext(GlobalContext)
+    const { countCart, setcountCart, setCarrito, carrito } = useContext(GlobalContext)
     const addCart = () => {
+        const prodrepetido = carrito.find(pro => pro.id == products.id)
+        if (prodrepetido) {
+            swal("Este Producto Ya esta agregado")
+            return
+        }
+
+
         setcountCart(countCart + 1)
         alert(`${counter} producto agregado al carro`)
         setShow(!show)
         products.cantidad = counter;
-        setCarrito ([...carrito,products]);
+        products.subtotal = products.cantidad * products.precio;
+        setCarrito([...carrito, products]);
     }
 
     return (

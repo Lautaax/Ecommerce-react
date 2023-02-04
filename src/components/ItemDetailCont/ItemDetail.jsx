@@ -13,8 +13,10 @@ const ItemDetail = () => {
 
     useEffect(() => {
         productsById(id)
-            .then(res => setProducts(res))
+            .then(res => setProducts(res)) 
+            
     }, [])
+
 
 
     return (
@@ -22,9 +24,10 @@ const ItemDetail = () => {
 
             <img src={products.image} alt="" />
             <p>Stock:{products.stock} </p>
+            <p>Precio :{products.precio}</p>
             {
                 show ? <Link to="/cart"> <Button variant="success">TerminarCompra</Button></Link> :
-                    <ItemCount show={show} setShow={setShow} stock={products.stock} products={products} />
+                    <ItemCount show={show} setShow={setShow} stock={products.stock} products={products}  />
             }
             <Link to="/"> <Button  variant="info">Volver</Button>{''} </Link>
         </div>

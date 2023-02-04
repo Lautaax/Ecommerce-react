@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import GlobalContext from '../../context/GlobalContext';
 import { crearOrden } from '../../services/firebase';
 import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert'
 
 const Check = () => {
     const navigate = useNavigate() 
@@ -23,6 +24,7 @@ const Check = () => {
             Items: carrito, fecha: new Date()
         }
 crearOrden(orden)
+swal("Muchas gracias!", "Su compra fue procesada", "success");
 navigate("/")
     }
 
