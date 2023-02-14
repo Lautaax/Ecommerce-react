@@ -20,7 +20,7 @@ const ItemDetail = () => {
 
 
     return (
-        <div className='container card w-25'>
+        <div variant="info" className='container card w-25'>
 
             <img src={products.image} alt="" />
             <p>Stock:{products.stock} </p>

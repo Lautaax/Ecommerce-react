@@ -17,9 +17,9 @@ const ItemList = ({ prod }) => {
 
 
     return (
-        <Card  style={{  width: '18rem' }}>
+        <Card className='container' bg='orange' style={{  width: '18rem' }}>
             <Card.Img variant="top" src={prod.image} onClick={()=>redirectItemDetail(prod.id)} />
-            <Card.Body  >
+            <Card.Body   >
                 <Card.Title  >{prod.first_name}</Card.Title>
                 <Card.Text>Genero:
                 {prod.gender}

@@ -14,15 +14,13 @@ function ColorSchemesExample() {
         <Link to="/">
           <img src={logo} width="150px" alt="" />
         </Link>
-          <Nav className="me-auto">
-            <Nav.Link href="/">Inicio</Nav.Link>
-            <Nav.Link href="/category/genderFluid">Fluid  </Nav.Link>
-            <Nav.Link href="/category/male">Male  </Nav.Link>
-            <Nav.Link href="/category/female">Female  </Nav.Link>
-
-            
+          <Nav className="me-auto ">
+            <Link className="nav-link" to="/">Inicio</Link>
+            <Link className="nav-link" to="/category/genderFluid"> Fluid  </Link>
+            <Link className="nav-link" to="/category/male">Male  </Link>
+            <Link className="nav-link" to="/category/female">Female  </Link>
           </Nav>
-          <Link to="/cart"> <CardWidget /></Link>
+          <Link className="nav-link" to="/cart"> <CardWidget /></Link>
         </Container>
       </Navbar>
     </>

@@ -4,9 +4,7 @@ import ItemDetail from './ItemDetail'
 export const ItemDetailCont = () => {
   return (
     <div>
-
 <ItemDetail/>
-
     </div>
   )
 }

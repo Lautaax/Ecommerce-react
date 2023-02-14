@@ -1,13 +1,15 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import GlobalContext from '../../context/GlobalContext'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 export const Cart = () => {
 const navigate = useNavigate()
   const { carrito, setCarrito,setcountCart } = useContext(GlobalContext)
   let suma = carrito.reduce((acc, prod) => acc + prod.subtotal,0 )
   const vaciarcarro = () => {
-setcountCart (0)
+setcountCart ("")
 setCarrito ([])
   }
   const check = () =>{
@@ -23,9 +25,12 @@ navigate("/Check")
           <h4>Precio:{cart.precio}</h4>
         </div>
       ))}
+       <Card className='container w-25'>
       <p>Total: {suma}</p>
-      <button onClick={check}>Finalizar Compra</button>
-      <button onClick={vaciarcarro} >Vaciar Carrito</button>
+      <Button variant="outline-success" onClick={check}>Finalizar Compra</Button>
+      <Button variant="outline-danger" onClick={vaciarcarro} >Vaciar Carrito</Button>
+      
+      </Card>
     </div>
   )
 }
