@@ -9,7 +9,7 @@ const {countCart } =useContext(GlobalContext)
     return (
         <div className=' fs-2 '>
             <IoCartSharp/>
-            <span class="badge rounded-pill bg-primary bg-danger">{countCart}</span>
+            <span className="badge rounded-pill bg-primary bg-danger">{countCart}</span>
         </div>
     );
 };
