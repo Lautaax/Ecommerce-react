@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { productsById } from '../../services/firebase';
 import { Loader } from "../Loader/Loader";
 
-const ItemDetail = () => {
+export const ItemDetail = () => {
 
     const [show, setShow] = useState(false);
     const [products, setProducts] = useState({})
@@ -40,5 +40,3 @@ const ItemDetail = () => {
         </div>
     )
 }
-
-export default ItemDetail

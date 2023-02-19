@@ -6,7 +6,7 @@ const GlobalProvider = ({children}) => {
 
     //contador
 
-    const [countCart , setcountCart] =useState (0)
+    const [countCart , setcountCart] =useState ("")
     const [carrito, setCarrito] =useState ([])
 
 return (

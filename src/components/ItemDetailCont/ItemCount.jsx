@@ -3,6 +3,7 @@ import { useContext } from "react"
 import GlobalContext from "../../context/GlobalContext"
 import swal from 'sweetalert'
 
+
 const ItemCount = ({ stock, show, setShow, products }) => {
 
     const [counter, setcounter] = useState(1)
@@ -16,7 +17,7 @@ const ItemCount = ({ stock, show, setShow, products }) => {
 
 
         setcountCart(countCart + 1)
-        alert(`${counter} producto agregado al carro`)
+        swal(`${counter} productos agregado al carro`)
         setShow(!show)
         products.cantidad = counter;
         products.subtotal = products.cantidad * products.precio;

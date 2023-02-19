@@ -4,18 +4,20 @@ import GlobalContext from '../../context/GlobalContext'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { EmptyCart } from '../EmptyCart/EmptyCart';
+
+
+
 export const Cart = () => {
   const navigate = useNavigate()
   const { carrito, setCarrito, setcountCart, countCart } = useContext(GlobalContext)
   let suma = carrito.reduce((acc, prod) => acc + prod.subtotal, 0)
   const vaciarcarro = () => {
-    setcountCart(0)
+    setcountCart("")
     setCarrito([])
   }
   const check = () => {
     navigate("/Check")
   }
-const titulo = countCart ? 'Con Datos' : 'Vacio'
 
   return (
     <div>
